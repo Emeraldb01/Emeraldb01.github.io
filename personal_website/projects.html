@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<section class="sub-header">
+    <nav>
+        <!--a href="index.html"><img src="image/logo.png"></a-->
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="extra.html">EXTRACURRICULAR</a></li>
+                <li><a id="scroll-bottom">CONTACT</button></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+
+<!----Projects------>
+<section class="sidebar-layout">
+    <section class="sidebar">
+        <ul>
+            <li><a class="sidebar_ti" href="#ai">AI</a></li>
+            <li><a class="sidebar_ti" href="#website">WEBSITE</a></li>
+            <li><a class="sidebar_ti" href="#cg">CG</a></li>
+            <li><a class="sidebar_ti" href="#others">OTHERS</a></li>
+        </ul>
+    </section>
+    <section class="project-list">
+        <h1>PROJECT</h1>
+        <div class="row" id="ai">
+            <div class="project-col">
+                <a href="https://github.com/Emeraldb01/AI_project_team11_2022">
+                    <img src="image/g1.png" style="max-width:100%; max-height:100%">
+                    <div class="layer">
+                        <h3>540 Gesture<br>Recognition</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="project-col">
+                <a href="https://github.com/Emeraldb01/Wine_Movie_classification">
+                    <img src="image/g4.png" style="max-width:100%; max-height:100%">
+                    <div class="layer">
+                        <h3>Wine & Movie Review Classification</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row" id="website">
+            <div class="project-col">
+                <a href="https://github.com/Emeraldb01/Online_Shop_platform">
+                    <img src="image/DG2.png" style="max-width:100%; max-height:100%">
+                    <div class="layer">
+                        <h3>Online Shop DBMS</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="project-col">
+                <a href="https://github.com/Emeraldb01/TaipeiMRT_UIUX">
+                    <img src="image/DG5.png" style="max-width:100%; max-height:100%">
+                    <div class="layer">
+                        <h3>Taipei MRT<br>UI/UX Design</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="project-col">
+                <a href="projects.html">
+                    <img src="image/DG4.png" style="max-width:100%; max-height:100%">
+                    <div class="layer">
+                        <h3>Personal Website</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row" id="cg">
+            <div class="project-col">
+                <a href="https://youtu.be/pz_xSyIPTEw">
+                    <img src="image/g6.png" style="max-width:100%; max-height:100%">
+                    <div class="layer">
+                        <h3>OpenGL Short Film</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="project-col">
+                <a href="projects.html">
+                    <img src="image/g3.png" style="max-width:100%; max-height:100%">
+                    <div class="layer">
+                        <h3>4 Shading Techniques in OpenGL</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row" id="others">
+            <div class="project-col">
+                <a href="https://github.com/Emeraldb01/America_Mass_Shooting_app">
+                    <img src="image/DG3.png" style="max-width:100%; max-height:100%">
+                    <div class="layer">
+                        <h3>America Mass Shooting DBMS app</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="project-col">
+                <a href="https://agenicy.itch.io/off-is-line">
+                    <img src="image/DG3.png" style="max-width:100%; max-height:100%">
+                    <div class="layer">
+                        <h3>Off Is Slime Game</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="project-col">
+                <a href="https://github.com/Emeraldb01/Dungeon_game">
+                    <img src="image/DG1.png" style="max-width:100%; max-height:100%">
+                    <div class="layer">
+                        <h3>Dungeon Text-Based Game</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+<!----Contact---->
+<section class="contact">
+    <h1>Contact me</h1>
+    <div class="align">
+        <i class="fa fa-github"></i>
+        <i class="fa fa-youtube-play"></i>
+        <i class="fa fa-linkedin-square"></i>
+    </div>
+    <div class="align">
+        <p>emeraldb01.cs09@nycu.edu.tw
+            <br>0911-720-746
+            <br>新竹市東區大學路1001號女二舍761室
+        </p>
+    </div>
+</section>
+
+
+
+<!--------Javascript for toggle menu-------->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+
+<script>
+    document.getElementById("scroll-bottom").addEventListener("click", function(){
+        window.scrollTo(0,document.body.scrollHeight);
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<section class="header">
+    <nav>
+        <!--a href="index.html"><img src="image/logo.png"></a-->
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="extra.html">EXTRACURRICULAR</a></li>
+                <li><a id="scroll-bottom">CONTACT</button></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+<section>
+    <div class="text-box" id="ti">
+            <h1>Emerald Chang</h1>
+            <h3>常乃璇</h3>
+            <p>Hello! My name is Emerald (they/them).
+                <br>I'm an undergraduate in CS in NYCU.
+                <br><br>Fun fact about me:
+                <br>I play guitar in a band!
+            </p>
+
+        <a id="scroll-button" class="scroll-btn">click to explore!</a>
+    </div>
+
+    <img class="img1" src="image/me1.png" style="max-width:100%; max-height:100%">
+
+
+
+</section>
+
+<!----about------>
+<section class="about" id="about">
+    <h1>My Skill Sets</h1>
+    <div class="row">
+        <div class="info">
+            <h3>Language</h3>
+                <p>- C/C++
+                <br>- Python
+                <br>- HTML, CSS
+                <br>- PHP, SQL
+            </p>
+        </div>
+        <div class="info">
+            <h3>Technique</h3>
+            <p>- Data Structure
+                <br>- Algorithm
+                <br>- DBMS
+                <br>- Git
+            </p>
+        </div>
+        <div class="info">
+            <h3>Others</h3>
+            <p>- Unity
+                <br>- Fluency in English/ Mandarin
+                <br>- Leadership
+            </p>
+        </div>
+</section>
+
+<!----Projects------>
+<section class="project">
+    <h1>Project Overview</h1>
+    <div class="row">
+        <div class="project-col">
+            <a href="https://github.com/Emeraldb01/AI_project_team11_2022">
+                <img src="image/g1.png" style="max-width:100%; max-height:100%">
+                <div class="layer">
+                    <h3>540 Gesture<br>Recognition</h3>
+                </div>
+            </a>
+        </div>
+        <div class="project-col">
+            <a href="https://github.com/Emeraldb01/Online_Shop_platform">
+                <img src="image/DG2.png" style="max-width:100%; max-height:100%">
+                <div class="layer">
+                    <h3>Online Shop DBMS</h3>
+                </div>
+            </a>
+        </div>
+        <div class="project-col">
+            <a href="https://github.com/Emeraldb01/Wine_Movie_classification">
+                <img src="image/g4.png" style="max-width:100%; max-height:100%">
+                <div class="layer">
+                    <h3>Wine & Movie Review Classification</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+    <a href="projects.html" class="more-btn">click for more</a>
+</section>
+
+<!---Extracurricular--->
+<section class="extra">
+    <h1>Extracurricular Overview</h1>
+    <div class="row">
+        <div class="project-col">
+            <a href="https://www.facebook.com/nctustarvoice">
+                <img src="image/DG4.png" style="max-width:100%; max-height:100%">
+                <div class="layer">
+                    <h3>Star Voice Club President</h3>
+                </div>
+            </a>
+        </div>
+        <div class="project-col">
+            <a href="https://www.youtube.com/watch?v=klIjYezTJP0">
+                <img src="image/g1.png" style="max-width:100%; max-height:100%">
+                <div class="layer">
+                    <h3>Short Film - 10:15</h3>
+                </div>
+            </a>
+        </div>
+        <div class="project-col">
+            <a href="index.html">
+                <img src="image/DG3.png" style="max-width:100%; max-height:100%">
+                <div class="layer">
+                    <h3>Short Film - self introduction</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+    <a href="extra.html" class="more-btn">click for more</a>
+</section>
+
+<!----Contact---->
+<section class="contact">
+    <h1>Contact me</h1>
+    <div class="align">
+        <i class="fa fa-github"></i>
+        <i class="fa fa-youtube-play"></i>
+        <i class="fa fa-linkedin-square"></i>
+    </div>
+    <div class="align">
+        <p>emeraldb01.cs09@nycu.edu.tw
+            <br>0911-720-746
+            <br>新竹市東區大學路1001號女二舍761室
+        </p>
+    </div>
+</section>
+
+
+
+<!---Javascript for "about" scrolling down---->
+<script>
+    // Get the button
+    const button = document.getElementById("scroll-button");
+    
+    // Add an event listener to the button
+    button.addEventListener("click", function() {
+        const element = document.getElementById("about");
+        // Get the current position of the element
+        const elementPosition = element.getBoundingClientRect().top;
+        // Get the current position of the scroll bar
+        const currentPosition = window.pageYOffset;
+        // Calculate the distance to scroll
+        const distance = elementPosition - currentPosition;
+        // Set the duration of the animation (in milliseconds)
+        const duration = 1000;
+        // Create a function that scrolls down by a certain amount per frame
+        const scrollBy = (distance - 400) / (duration / 2);
+        // Use setTimeout to create the animation
+        let start = null;
+        function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        window.scrollTo(0, currentPosition + progress * scrollBy);
+        if (progress < duration) {
+            window.requestAnimationFrame(step);
+        }
+    }
+    // Call the animation function
+    window.requestAnimationFrame(step);
+});
+
+</script>
+
+<!--------Javascript for toggle menu-------->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+
+<script>
+    document.getElementById("scroll-bottom").addEventListener("click", function(){
+        window.scrollTo(0,document.body.scrollHeight);
+    });
+</script>
+
+
+</body>
+</html>

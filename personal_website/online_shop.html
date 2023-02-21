@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<section class="sub-header">
+    <nav>
+        <!--a href="index.html"><img src="image/logo.png"></a-->
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="extra.html">EXTRACURRICULAR</a></li>
+                <li><a id="scroll-bottom">CONTACT</button></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+<section>
+    <div class="project-info" id="ti">
+        <h1>
+            Online_Shop_platform
+            </h1>
+        <h3>PHP, HTML, CSS, SQL </h3>
+        <p>Online shop website on which users and owners are able to login, add new items, add to cart, check orders, etc.
+            <br>Frontend: Use HTML, CSS for user accessing functionality.
+            <br>Backend: Use PHP, SQL (mysqli) for retrieving and updating data.
+        </p>
+        <a href="https://github.com/Emeraldb01/Online_Shop_platform" class="git-btn">github</a>
+    </div>
+</section>
+
+<!----Contact---->
+<section class="contact">
+    <h1>Contact me</h1>
+    <div class="align">
+        <i class="fa fa-github"></i>
+        <i class="fa fa-youtube-play"></i>
+        <i class="fa fa-linkedin-square"></i>
+    </div>
+    <div class="align">
+        <p>emeraldb01.cs09@nycu.edu.tw
+            <br>0911-720-746
+            <br>新竹市東區大學路1001號女二舍761室
+        </p>
+    </div>
+</section>
+
+
+
+<!---Javascript for "about" scrolling down---->
+<script>
+    // Get the button
+    const button = document.getElementById("scroll-button");
+    
+    // Add an event listener to the button
+    button.addEventListener("click", function() {
+        const element = document.getElementById("about");
+        // Get the current position of the element
+        const elementPosition = element.getBoundingClientRect().top;
+        // Get the current position of the scroll bar
+        const currentPosition = window.pageYOffset;
+        // Calculate the distance to scroll
+        const distance = elementPosition - currentPosition;
+        // Set the duration of the animation (in milliseconds)
+        const duration = 1000;
+        // Create a function that scrolls down by a certain amount per frame
+        const scrollBy = (distance - 400) / (duration / 2);
+        // Use setTimeout to create the animation
+        let start = null;
+        function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        window.scrollTo(0, currentPosition + progress * scrollBy);
+        if (progress < duration) {
+            window.requestAnimationFrame(step);
+        }
+    }
+    // Call the animation function
+    window.requestAnimationFrame(step);
+});
+
+</script>
+
+<!--------Javascript for toggle menu-------->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+
+<script>
+    document.getElementById("scroll-bottom").addEventListener("click", function(){
+        window.scrollTo(0,document.body.scrollHeight);
+    });
+</script>
+
+
+</body>
+</html>
