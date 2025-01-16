@@ -144,6 +144,30 @@ nav .fa{
         display: block;
         opacity: 1; /* Ensure visibility */
     }
+
+    .timeline-period {
+        padding-left: 10px; /* Reduce left padding for smaller screens */
+    }
+
+    .timeline-period h2 {
+        font-size: 18px; /* Smaller font size for years */
+    }
+
+    .timeline-event {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .timeline-event h3 {
+        font-size: 16px; /* Adjust font size for titles */
+    }
+
+    .timeline-event p, .timeline-event ul li {
+        font-size: 14px; /* Smaller font size for content */
+    }
+
+    .timeline {
+        padding-left: 0; /* Remove additional padding */
+    }
 }
 
 /*----- about -----*/
