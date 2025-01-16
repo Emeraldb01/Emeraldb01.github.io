@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>NOTICE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<section class="sub-header">
+    <nav>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="extra.html">BLOG</a></li>
+                <li><a id="scroll-bottom">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+
+<!-- Project Information Section -->
+<section>
+    <div class="project-info" id="ti">
+        <h1>NOTICE!</h1>
+        <h3>A Web-Based AI-Powered Note-Taking Application</h3>
+        <strong>Team Project<br>
+        <strong>Year:</strong> 2024 | <strong>Role:</strong> Full-Stack Developer, AI Integrator</strong>
+
+        <br><br>
+        <p><br>NOTICE is an innovative web application designed to enhance productivity through AI-assisted note-taking. Leveraging modern web development techniques and AI models, the application automatically organizes, summarizes, and categorizes user notes for a seamless documentation experience.
+            <br><img src="image/notice_demo.png" style="max-width:40%; max-height:40%">
+            <br><br>By integrating natural language processing (NLP) and machine learning, NOTICE analyzes user inputs, extracts key points, and suggests organization strategies to optimize note efficiency. It bridges the gap between manual note-taking and smart digital assistance.
+        </p>
+
+        <p><strong>Key Features:</strong>
+            <br>- AI-assisted summarization and categorization of notes.
+            <br>- Intuitive and responsive web-based interface.
+            <br>- Searchable and filterable note database for quick access.
+            <br>- Multi-language support for diverse users.
+        </p>
+
+        <!-- Results Section -->
+        <h2>Results</h2>
+        <p>NOTICE significantly improves user productivity by automating tedious aspects of note-taking. Its AI-powered summarization feature saves users time and effort, while its categorization capabilities ensure structured and organized documentation.
+        </p>
+
+        <p>The application received positive feedback from initial testers for its accuracy in summarization and the sleek, user-friendly interface. Users appreciated the seamless integration of AI into daily workflows, highlighting its potential for both academic and professional environments.
+        </p>
+
+        <p>Planned future improvements include expanding NLP capabilities for better contextual understanding and integrating real-time collaboration features for teams.</p>
+
+        <!-- GitHub Repository Buttons -->
+        <a href="https://github.com/notice-project/notice-api" class="git-btn">GitHub Repository</a>
+        <a href="https://youtu.be/Wzo7QOtqouw?si=TjlceJ08IA2QaE2F" class="git-btn">Demo Video</a>
+    </div>
+</section>
+
+<!----Contact---->
+<section class="contact">
+    <h1>Contact me</h1>
+    <div class="align">
+        <a href="https://github.com/Emeraldb01?tab=repositories" target="_blank" aria-label="GitHub">
+            <i class="fa fa-github"></i>
+        </a>
+        <a href="www.linkedin.com/in/naisyuanchang" target="_blank" aria-label="LinkedIn">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://app.joinhandshake.com/profiles/gvxpfw" target="_blank" aria-label="Handshake">
+            <i class="fa fa-handshake-o"></i>
+        </a>
+    </div>
+    <div class="align">
+        <p>naisyuanchang@gmail.com
+            <br>858-933-8169
+        </p>
+    </div>
+</section>
+
+<!-- JavaScript for menu toggle -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+<script>
+    document.getElementById("scroll-bottom").addEventListener("click", function(){
+        window.scrollTo(0,document.body.scrollHeight);
+    });
+</script>
+
+</body>
+</html>
