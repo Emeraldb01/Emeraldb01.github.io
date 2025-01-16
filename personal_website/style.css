@@ -145,29 +145,33 @@ nav .fa{
         opacity: 1; /* Ensure visibility */
     }
 
+    .timeline {
+        padding-left: 0; /* Remove additional padding for smaller screens */
+    }
+
     .timeline-period {
         padding-left: 10px; /* Reduce left padding for smaller screens */
     }
 
     .timeline-period h2 {
-        font-size: 18px; /* Smaller font size for years */
+        font-size: 18px; /* Adjust font size for years */
     }
 
     .timeline-event {
-        padding: 15px; /* Adjust padding for smaller screens */
+        padding: 10px; /* Smaller padding for the event box */
+        margin-left: 0; /* Align boxes to the edge */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow for smaller screens */
     }
 
     .timeline-event h3 {
         font-size: 16px; /* Adjust font size for titles */
     }
 
-    .timeline-event p, .timeline-event ul li {
-        font-size: 14px; /* Smaller font size for content */
+    .timeline-event p,
+    .timeline-event ul li {
+        font-size: 14px; /* Adjust font size for content */
     }
 
-    .timeline {
-        padding-left: 0; /* Remove additional padding */
-    }
 }
 
 /*----- about -----*/
@@ -230,7 +234,6 @@ h3{
 }
 
 .project-col {
-    aspect-ratio: 2.5 / 2; /* Set the aspect ratio to 3:2 */
     border-radius: 10px; /* Rounded corners */
     margin-bottom: 30px;
     position: relative;
