@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="projects.html">PROJECTS</a></li>
-                <li><a href="extra.html">BLOG</a></li>
+                <li><a href="blog.html">BLOG</a></li>
                 <li><a id="scroll-bottom">CONTACT</button></li>
             </ul>
         </div>
@@ -94,3 +94,8 @@
     </div>
 </section>
 
+<script>
+    document.getElementById("scroll-bottom").addEventListener("click", function(){
+        window.scrollTo(0,document.body.scrollHeight);
+    });
+</script>

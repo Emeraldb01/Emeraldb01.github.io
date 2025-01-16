@@ -195,27 +195,44 @@ h3{
 }
 
 /*------project------*/
-.project{
+.project {
     width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 100px;
+    display: grid; /* Use a grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 20px; /* Space between cards */
 }
-.project-col{
-    flex-basis: 50%;
-    border-radius: 10px;
+
+.project-col {
+    aspect-ratio: 2.5 / 2; /* Set the aspect ratio to 3:2 */
+    border-radius: 10px; /* Rounded corners */
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
-}
-.project-col img{
-    max-width:100%;
-    max-height:100%;
-    width: 100%;
-    display: block;
+    display: flex;
+    flex-direction: column; /* For better alignment */
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
 }
 
-.layer{
+.project-col:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-col img {
+    max-width: 100%;
+    max-height: 60%; /* Limit the image height to maintain layout */
+    width: 100%;
+    object-fit: cover; /* Ensure proper aspect ratio of images */
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Add a subtle separator */
+}
+
+.layer {
     background: rgba(71, 91, 62, 0.5);
     height: 100%;
     width: 100%;
@@ -224,39 +241,42 @@ h3{
     left: 0;
     transition: 0.5s;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* Ensure content is at the bottom */
-    padding: 10px;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Space the elements evenly */
+    padding: 10px; /* Add padding for better spacing */
 }
 
-.layer:hover{
+.layer:hover {
     background: rgba(71, 91, 62, 0.9);
 }
 
-.layer h3{
-    width: 100%;
+.layer h3 {
     font-weight: 600;
     color: #fff;
-    font-size: 30px; /* Increased font size */
-    position: absolute;
-    top: 20px; /* Positioned at the top center */
-    left: 50%;
-    transform: translateX(-50%);
+    font-size: 36px; /* Increased font size for better readability */
+    text-align: center;
+    margin: 0; /* Remove extra margins */
+    padding: 0; /* Remove extra padding */
+    flex: 1; /* Allocate space to place it in the top half */
+    display: flex; /* Use flex to center-align */
+    align-items: center;
+    justify-content: center;
 }
 
-.layer p{
+.layer p {
     color: #fff;
-    font-size: 14px;
-    margin: 10px 0;
+    font-size: 16px; /* Larger font size for better readability */
     text-align: center;
-    line-height: 1.4;
-    position: absolute;
-    bottom: 20px; /* Positioned at the bottom center */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%; /* Adjusted width to make the description wider */
-    max-width: 90%; /* Optionally limit maximum width */
+    line-height: 1.6;
+    padding: 0 10px; /* Add padding for better spacing */
+    flex: 1; /* Allocate space to place it in the bottom half */
+    display: flex; /* Use flex to center-align */
+    align-items: center;
+    justify-content: center;
+    max-width: 80%; /* Restrict the width of the paragraph */
+    margin: 0 auto; /* Ensure horizontal centering */
 }
+
 
 
 .more-btn{
@@ -335,38 +355,6 @@ h3{
 
 
 /*---project page----*/
-.sidebar-layout{
-    display: grid;
-    grid-template-columns: 1fr 10fr;
-
-}
-.sidebar{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    position: fixed;
-    width: 80%;
-    margin: auto;
-    text-align: left;
-    padding-top: 150px;
-    padding-left: 30px;
-}
-.sidebar ul{
-    list-style: none;
-}
-.sidebar_ti{
-    color:rgb(179, 177, 177);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.5s;
-}
-
-.sidebar_ti:hover{
-    color: rgb(71, 91, 62);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-}
 
 .project-list{
     grid-column-start:2;
@@ -377,10 +365,20 @@ h3{
     padding-top: 50px;
 }
 
-.sub-header{
+.sub-header {
     min-height: 15vh;
     width: 100%;
-    background-image: linear-gradient(rgba(146, 126, 190, 1),rgba(146, 126, 190, 1)), url(image/1.png);
+    margin: auto;
+    background-image: linear-gradient(rgba(146, 126, 190, 1), rgba(146, 126, 190, 1)), url(image/1.png);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 30px;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(image/1.png);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -405,17 +403,25 @@ h3{
     padding-top: 30px;
     padding-left: 70px;
 }
-.project-info h1{
+.project-info h1, .blog-info h1 {
+    text-align: left;
     font-size: 52px;
+    margin-bottom: 20px;
 }
-.project-info h3{
+
+.project-info h3, .blog-info h3 {
     text-align: left;
     font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
-.project-info p{
-    width: 100%;
-    margin: 10px 0 40px;
+
+/* Paragraphs */
+.project-info p, .blog-info p {
+    text-align: left;
     font-size: 15px;
+    line-height: 1.6;
+    margin: 10px 0 40px;
 }
 
 .git-btn{
