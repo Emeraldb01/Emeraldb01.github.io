@@ -47,14 +47,16 @@ nav img{
 .nav-links ul li:hover::after{
     width: 100%;
 }
-.text-box{
-    width: 120%;
+.text-box {
+    width: 50%; /* Set the width to prevent it from stretching too far */
     color: #fff;
     position: absolute;
-    top: 30%;
+    top: 30%; /* Adjusted positioning */
     left: 10%;
     text-align: left;
+    z-index: 1; /* Ensure it stays above the background */
 }
+
 .text-box h1{
     font-size: 52px;
 }
@@ -83,14 +85,15 @@ nav img{
     background: #fde361;
     transition: 0.5s;
 }
-.img1{
-    position: absolute;
-    top: 25%;
-    right: 8%;
-    width: 400px;
-    height: 400px;
-}
 
+.img1 {
+    position: absolute;
+    top: 30%; /* Align with the text-box vertically */
+    right: 10%; /* Ensure proper spacing from the edge */
+    width: 300px; /* Adjust image size for better proportions */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Ensure proper stacking */
+}
 
 nav .fa{
     display: none;
@@ -129,8 +132,17 @@ nav .fa{
     .nav-links ul{
         padding: 30px;
     }
-    .img1{
-        opacity: 0;
+    .text-box {
+        width: 80%; /* Make text box take more space on small screens */
+        top: 20%; /* Adjust vertical positioning */
+        left: 10%; /* Center-align the text box */
+    }
+    .img1 {
+        position: static; /* Make it flow naturally below the text */
+        width: 80%; /* Adjust image size for small screens */
+        margin: 20px auto; /* Center the image */
+        display: block;
+        opacity: 1; /* Ensure visibility */
     }
 }
 
@@ -190,7 +202,7 @@ h3{
     padding-top: 100px;
 }
 .project-col{
-    flex-basis: 32%;
+    flex-basis: 50%;
     border-radius: 10px;
     margin-bottom: 30px;
     position: relative;
@@ -211,23 +223,44 @@ h3{
     top: 0;
     left: 0;
     transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Ensure content is at the bottom */
+    padding: 10px;
 }
+
 .layer:hover{
     background: rgba(71, 91, 62, 0.9);
 }
+
 .layer h3{
     width: 100%;
-    font-weight: 500;
+    font-weight: 600;
     color: #fff;
-    font-size: 26px;
-    bottom: 45%;
+    font-size: 30px; /* Increased font size */
+    position: absolute;
+    top: 20px; /* Positioned at the top center */
     left: 50%;
     transform: translateX(-50%);
-    position: absolute;
 }
 
+.layer p{
+    color: #fff;
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 1.4;
+    position: absolute;
+    bottom: 20px; /* Positioned at the bottom center */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Adjusted width to make the description wider */
+    max-width: 90%; /* Optionally limit maximum width */
+}
+
+
 .more-btn{
-    display: incline-block;
+    display: inline-block;
     text-decoration: none;
     padding: 12px 34px;
     font-size: 15px;
@@ -243,6 +276,7 @@ h3{
     background: #d2beff;
     transition: 0.5s;
 }
+
 
 /*------extracurricular-----*/
 .extra{

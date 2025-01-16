@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Sign Input</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<section class="sub-header">
+    <nav>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="extra.html">EXTRACURRICULAR</a></li>
+                <li><a id="scroll-bottom">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+
+<!-- Project Information Section -->
+<section>
+    <div class="project-info" id="ti">
+        <h1>Sign Input</h1>
+        <h3>Android-based Gesture Recognition for Sign Language Input</h3>
+        <p><br>This project aims to build an Android application for real-time recognition of sign language gestures using computer vision techniques. 
+            The app identifies hand shapes and movements captured by the phone’s camera and converts them into text or speech, enabling more accessible communication for the hearing impaired.
+            <br><img src="image/sign_input_demo1.png" style="max-width:40%; max-height:40%">
+            <br><br>We use a combination of image processing algorithms and machine learning models to recognize hand gestures, including classification techniques to identify different signs.
+            <br>The app is designed for portability, ease of use, and efficiency, ensuring a seamless user experience for real-time sign language communication.
+            <br><img src="image/sign_input_demo2.png" style="max-width:50%; max-height:50%">
+        </p>
+        
+        <p><strong>Key Features:</strong>
+            <br>- Real-time sign language gesture recognition through mobile camera.
+            <br>- Text and speech output for recognized gestures.
+            <br>- User-friendly interface for easy interaction.
+            <br>- Machine learning model trained on large sign language datasets for high accuracy.
+        </p>
+
+        <!-- Results Section -->
+        <h2>Results</h2>
+        <p>The app successfully identifies and converts sign language gestures into both text and speech in real-time. The recognition accuracy varies depending on lighting conditions and camera quality, but the app performs well under typical usage scenarios.
+        </p>
+        
+        <p>Key results from testing included the app's ability to handle complex gestures and provide accurate translations of signs with a delay of less than a second. The machine learning model achieved an accuracy of 85% on the test dataset, which can be improved with further training and more data.</p>
+        
+        <p>The user feedback was overwhelmingly positive, especially in terms of the app's potential to improve accessibility for people with hearing impairments. Suggestions for improvement include adding support for more sign languages and improving the model's recognition of fast gestures.</p>
+        
+        <br><img src="image/sign_input_accuracy.png" style="max-width:50%; max-height:50%">
+        
+        <p><strong>Future Improvements:</strong><br>The next step involves enhancing the app’s performance by expanding the training dataset and optimizing the model for better recognition speed and accuracy in a wider range of environments.</p>
+        
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact">
+    <h1>Contact me</h1>
+    <div class="align">
+        <a href="https://github.com/Emeraldb01?tab=repositories" target="_blank" aria-label="GitHub">
+            <i class="fa fa-github"></i>
+        </a>
+        <a href="www.linkedin.com/in/naisyuanchang" target="_blank" aria-label="LinkedIn">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://app.joinhandshake.com/profiles/gvxpfw" target="_blank" aria-label="Handshake">
+            <i class="fa fa-handshake-o"></i>
+        </a>
+    </div>
+    <div class="align">
+        <p>naisyuanchang@gmail.com
+            <br>858-933-8169
+        </p>
+    </div>
+</section>
+
+<!-- JavaScript for menu toggle -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+<script>
+    document.getElementById("scroll-bottom").addEventListener("click", function(){
+        window.scrollTo(0,document.body.scrollHeight);
+    });
+</script>
+
+</body>
+</html>
