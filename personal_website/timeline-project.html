@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Timeline Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<section class="sub-header">
+    <nav>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a id="scroll-bottom">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+
+<!-- Project Information Section -->
+<section>
+    <div class="project-info" id="ti">
+        <h1>Timeline: Scientific Events Browser</h1>
+        <h3>Web Application for Event Visualization and User Contributions</h3>
+        <strong><br>Year: 2025 | Team Project | Role: Product Manager</strong>
+
+        <p><br>Timeline is a web platform that visualizes historical scientific events in an interactive timeline. It allows users to filter events by category or year, contribute new entries, and view trending topics through a contributor leaderboard system.
+        </p>
+
+        <br><img src="image/timeline_mockup.png" style="max-width:40%; max-height:40%">
+
+        <p><br>The platform focuses on accessible data navigation and gamified engagement, with features like admin-reviewed event submissions, color-coded categories, and dynamic filtering options.</p>
+
+        <p><strong>Key Features:</strong>
+            <br>- Interactive timeline view with zoom and filters
+            <br>- Contributor leaderboard and event approval system
+            <br>- Year and category-based event exploration
+            <br>- Admin dashboard for category management
+            <br>- Automated ranking of trending categories
+        </p>
+
+        <!-- Results Section -->
+        <h2>Results</h2>
+        <p>The project demonstrated successful coordination of frontend, backend, and database integration under Agile sprints. All major milestones — including admin dashboards, user profiles, CRUD functionalities, and timeline visualization — were delivered on schedule. 
+        </p>
+
+        <p>Through this project, I practiced cross-functional communication, milestone planning, backlog grooming, and balancing scope against team bandwidth for an MVP delivery under tight academic deadlines.</p>
+
+        <!-- View Project Charter Button -->
+        <a href="personal_website/public/Project_Charter_Timeline.pdf" class="git-btn" target="_blank">View Project Charter (PDF)</a>
+
+    </div>
+</section>
+
+<!----Contact---->
+<section class="contact">
+    <h1>Contact Me</h1>
+    <div class="align">
+        <a href="https://github.com/Emeraldb01?tab=repositories" target="_blank" aria-label="GitHub">
+            <i class="fa fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/naisyuanchang" target="_blank" aria-label="LinkedIn">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://app.joinhandshake.com/profiles/gvxpfw" target="_blank" aria-label="Handshake">
+            <i class="fa fa-handshake-o"></i>
+        </a>
+    </div>
+    <div class="align">
+        <p>naisyuanchang@gmail.com<br>858-933-8169</p>
+    </div>
+</section>
+
+<!-- JavaScript for menu toggle -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+    document.getElementById("scroll-bottom").addEventListener("click", function(){
+        window.scrollTo(0,document.body.scrollHeight);
+    });
+</script>
+
+</body>
+</html>
