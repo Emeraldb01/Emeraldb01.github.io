@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>540 Gesture Recognition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<section class="sub-header">
+    <nav>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a id="scroll-bottom">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+
+<section>
+    <div class="project-info" id="ti">
+        <h1>540 Gesture Recognition</h1>
+        <h3>Leveraging Feedforward Neural Networks & Mediapipe for Gesture Detection</h3>
+        <p>
+            <strong>Year:</strong> 2021 | <strong>Team Project</strong> | <strong>Role:</strong> Coordinator, Data Pipeline Architect, Baseline Model Trainer
+            <br><br>
+            In this project, we aim to detect the 5-4-0 emergency gesture in a video of up to 10 minutes in duration. This gesture, which plays a critical role in emergency communication, is captured through the use of advanced computer vision techniques.
+            <br><img src="image/540_Flow1.png" style="max-width:40%; max-height:50%">
+            <img src="image/540_Flow2.png" style="max-width:40%; max-height:30%">
+            <br><br>To achieve this, we employed the Mediapipe framework, which processes hand images and converts them into landmark data. These key landmarks are then used as input for a feedforward neural network model, which is well-suited for tasks where the input size remains constant.
+            <br>The model categorizes the input data into one of four possible classes: 5, 0, 4, or others. We further enhance accuracy by using an algorithm to track the sequential appearance of these three gestures over time.
+            <br><img src="image/540_Single_gesture_result.png" style="max-width:50%; max-height:50%">
+        </p>
+        <a href="https://github.com/Emeraldb01/AI_project_team11_2022" class="git-btn">GitHub Repository</a>
+    </div>
+</section>
+
+<!----Contact---->
+<section class="contact">
+    <h1>Contact me</h1>
+    <div class="align">
+        <a href="https://github.com/Emeraldb01?tab=repositories" target="_blank" aria-label="GitHub">
+            <i class="fa fa-github"></i>
+        </a>
+        <a href="www.linkedin.com/in/naisyuanchang" target="_blank" aria-label="LinkedIn">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://app.joinhandshake.com/profiles/gvxpfw" target="_blank" aria-label="Handshake">
+            <i class="fa fa-handshake-o"></i>
+        </a>
+    </div>
+    <div class="align">
+        <p>naisyuanchang@gmail.com
+            <br>858-933-8169
+        </p>
+    </div>
+</section>
+
+<!-- JavaScript for "about" scrolling down -->
+<script>
+    const button = document.getElementById("scroll-button");
+
+    button.addEventListener("click", function() {
+        const element = document.getElementById("about");
+        const elementPosition = element.getBoundingClientRect().top;
+        const currentPosition = window.pageYOffset;
+        const distance = elementPosition - currentPosition;
+        const duration = 1000;
+        const scrollBy = (distance - 400) / (duration / 2);
+        
+        let start = null;
+        function step(timestamp) {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            window.scrollTo(0, currentPosition + progress * scrollBy);
+            if (progress < duration) {
+                window.requestAnimationFrame(step);
+            }
+        }
+        window.requestAnimationFrame(step);
+    });
+</script>
+
+<!-- JavaScript for toggle menu -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+<script>
+    document.getElementById("scroll-bottom").addEventListener("click", function(){
+        window.scrollTo(0, document.body.scrollHeight);
+    });
+</script>
+
+</body>
+</html>

@@ -3,84 +3,119 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Projects</title>
+    <title>Projects | Emerald Chang</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .project-grid {
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding-top: 50px;
+        }
+        .project-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project-card-content {
+            padding: 20px;
+            text-align: left;
+        }
+        .project-card-content h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+        .project-card-content p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        .sub-header nav ul li a {
+            color: #333;
+        }
+    </style>
 </head>
 <body>
 <section class="sub-header">
     <nav>
-        <!--a href="index.html"><img src="image/logo.png"></a-->
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="projects.html">PROJECTS</a></li>
                 <li><a href="blog.html">BLOG</a></li>
-                <li><a id="scroll-bottom">CONTACT</button></li>
+                <li><a id="scroll-bottom">CONTACT</a></li>
             </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
     </nav>
 </section>
 
-<!----Projects------>
-<section class="project-list">
-    <h1>PROJECT</h1>
-    <div class="row">
-        <div class="project-col">
-            <a href="notice-app.html">
-                <img src="image/g4.png" style="max-width:100%; max-height:100%">
-                <div class="layer">
-                    <h3>NOTICE Note-taking App</h3>
-                    <p>NOTICE is a web application designed to tackle a common problem for university students: missing key points when dozing off in class. It provides real-time course transcription and, when needed, compares the transcript with existing notes to generate concise, bullet-point summaries.</p>
-                </div>
-            </a>
-        </div>
-        <div class="project-col">
-            <a href="sign-input.html">
-                <img src="image/g2.png" style="max-width:100%; max-height:100%">
-                <div class="layer">
-                    <h3>Sign Input</h3>
-                    <p>Sign Input addresses the challenge faced by deaf individuals in typing Chinese, a language that relies heavily on sound. Our Android input method offers a word-by-word translation, grammar correction, and emotion detection for accurate punctuation, making communication more efficient and accessible.</p>
-                </div>
-            </a>
+<section class="project-grid">
+    <div class="project-card">
+        <a href="timeline-project.html"><img src="image/g1.png"></a>
+        <div class="project-card-content">
+            <h3>Timeline: Scientific Events Browser</h3>
+            <p>Role: Product Manager | Learned: Agile execution, stakeholder communication | Showcases: End-to-end product development leadership.</p>
         </div>
     </div>
-    <div class="row">
-        <div class="project-col">
-            <a href="valorant-analysis.html">
-                <img src="image/g3.png" style="max-width:100%; max-height:100%">
-                <div class="layer">
-                    <h3>Valorant Player Analysis</h3>
-                    <p>Our project explores the impact of temporal context and agent selection on player emotions and behavior in Valorant, a team-based multiplayer shooter. Focusing on online community dynamics, we analyze how agent race correlates with toxicity in r/Valorant comments, uncovering patterns of bias and their influence on community interactions. </p>
-                </div>
-            </a>
+    <div class="project-card">
+        <a href="notice-app.html"><img src="image/g4.png"></a>
+        <div class="project-card-content">
+            <h3>NOTICE Note-Taking Assistant</h3>
+            <p>Role: Full-Stack Developer, AI Integrator | Learned: AI integration, full-stack workflows | Showcases: Agile development, user-centered design.</p>
         </div>
-        <div class="project-col">
-            <a href="540-gesture.html">
-                <img src="image/g1.png" style="max-width:100%; max-height:100%">
-                <div class="layer">
-                    <h3>540 Gesture<br>Recognition</h3>
-                    <p>The 540 Gesture Recognition project focuses on detecting 540 emergency gestures within long-form media. It combines individual gesture recognition with algorithms to identify continuous gestures, ensuring accurate detection of critical actions in real-time scenarios.</p>
-                </div>
-            </a>
+    </div>
+    <div class="project-card">
+        <a href="sign-input.html"><img src="image/g2.png"></a>
+        <div class="project-card-content">
+            <h3>Sign Input</h3>
+            <p>Role: Coordinator, UI Engineer | Learned: Accessibility design, team collaboration | Showcases: UX innovation, award-winning execution (2nd place).</p>
+        </div>
+    </div>
+    <div class="project-card">
+        <a href="valorant-analysis.html"><img src="image/g3.png"></a>
+        <div class="project-card-content">
+            <h3>Valorant Player Behavior Analysis</h3>
+            <p>Role: Coordinator, Data Analyst | Learned: Data scraping, sentiment analysis | Showcases: Community insights from unstructured data.</p>
+        </div>
+    </div>
+    <div class="project-card">
+        <a href="540-gesture.html"><img src="image/g1.png"></a>
+        <div class="project-card-content">
+            <h3>540 Gesture Recognition</h3>
+            <p>Role: Data Pipeline Architect, Model Trainer | Learned: Computer vision pipeline design | Showcases: Emergency gesture detection via video.</p>
         </div>
     </div>
 </section>
 
-
-<!----Contact---->
 <section class="contact">
-    <h1>Contact me</h1>
+    <h1>Contact Me</h1>
     <div class="align">
         <a href="https://github.com/Emeraldb01?tab=repositories" target="_blank" aria-label="GitHub">
             <i class="fa fa-github"></i>
         </a>
-        <a href="www.linkedin.com/in/naisyuanchang" target="_blank" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/naisyuanchang" target="_blank" aria-label="LinkedIn">
             <i class="fa fa-linkedin"></i>
         </a>
         <a href="https://app.joinhandshake.com/profiles/gvxpfw" target="_blank" aria-label="Handshake">
@@ -88,9 +123,7 @@
         </a>
     </div>
     <div class="align">
-        <p>naisyuanchang@gmail.com
-            <br>858-933-8169
-        </p>
+        <p>naisyuanchang@gmail.com<br>858-933-8169</p>
     </div>
 </section>
 
@@ -99,3 +132,5 @@
         window.scrollTo(0,document.body.scrollHeight);
     });
 </script>
+</body>
+</html>

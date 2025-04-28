@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Valorant Sentiment Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<section class="sub-header">
+    <nav>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a id="scroll-bottom">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+
+<!-- Project Information Section -->
+<section>
+    <div class="project-info" id="ti">
+        <h1>Temporal Patterns and Agent Influence on Player Sentiment</h1>
+        <h3>Analysis Based on Valorant Reddit Discussions</h3>
+        <strong>Year:</strong> 2024 | <strong>Team Project</strong> | <strong>Role:</strong> Coordinator, Toxicity Score Analysisist
+        <p><br>In this research, we examine how temporal context (day/night) and agent selection influence player emotions and behavior in the game *Valorant*. Using Reddit data, we analyze posts discussing agents, focusing on sentiment and toxicity levels over time, as well as any shifts after key game updates.
+            <br><img src="image/valorant_plot1.png" style="max-width:40%; max-height:40%">
+            <br><br>The research investigates the impact of various game updates (e.g., Gekko Patch Notes 9.08) and explores correlations between toxicity and the race of the agents mentioned. 
+            <br>The study utilizes Detoxify to analyze toxicity scores across seven categories, including toxicity, severe toxicity, obscenity, threats, insults, identity hatred, and sexual explicit content.
+            <br><img src="image/valorant_plot2.png" style="max-width:50%; max-height:50%">
+        </p>
+        
+        <p><strong>Research Questions:</strong>
+            <br>How does the time of day affect the sentiment in discussions about the same agent in Valorant? 
+            <br><br>What is the correlation between toxicity and the race of agents mentioned in Valorant discussions?
+            <br><br>How did the Gekko patch impact players' sentiment, and did it influence the other agents in the initiator role?
+        </p>
+
+        <!-- Results Section -->
+        <h2>Results</h2>
+        <p>The analysis revealed several important insights. First, there was no significant correlation between the time of day (day/night) and the sentiment or toxicity levels in *Valorant* discussions. This indicates that the sentiment expressed in discussions does not seem to be influenced by when the post was made.</p>
+        
+        <p>Second, we found a statistically significant difference in toxicity levels based on the race of the agent being discussed. In particular, agents of certain racial backgrounds, particularly Asian agents, attracted higher toxicity scores compared to others. This suggests that racial bias may play a role in the toxicity observed in the *Valorant* community.</p>
+        
+        <p>Finally, the introduction of the Gekko agent in Patch Notes 9.08 had a noticeable impact on player sentiment. Following the update, players’ discussions focused more on the gameplay aspects and specific abilities of Gekko. This shift in conversation was also reflected in the decreased frequency of discussions about other agents in the initiator role, such as Skye and Sova.</p>
+        
+        <p>Before the Gekko patch, conversations generally centered on agent performance, team strategies, and gameplay mechanics. After the patch, however, the focus shifted to Gekko-specific abilities and how to use them effectively in matches. This change highlights the significance of new content in shaping the dynamics of online discussions.</p>
+
+        <br><img src="image/Gekko_discussion.png" style="max-width:50%; max-height:50%">
+        
+        <p><strong>Additional Insights:</strong><br> The findings also revealed that discussions about agent performance were initially negative but became more stable over time. Notably, the shift towards Gekko’s abilities following the patch was an important marker in changing the conversation dynamics.</p>
+        
+    </div>
+</section>
+
+<!----Contact---->
+<section class="contact">
+    <h1>Contact me</h1>
+    <div class="align">
+        <a href="https://github.com/Emeraldb01?tab=repositories" target="_blank" aria-label="GitHub">
+            <i class="fa fa-github"></i>
+        </a>
+        <a href="www.linkedin.com/in/naisyuanchang" target="_blank" aria-label="LinkedIn">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://app.joinhandshake.com/profiles/gvxpfw" target="_blank" aria-label="Handshake">
+            <i class="fa fa-handshake-o"></i>
+        </a>
+    </div>
+    <div class="align">
+        <p>naisyuanchang@gmail.com
+            <br>858-933-8169
+        </p>
+    </div>
+</section>
+
+<!-- JavaScript for menu toggle -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+<script>
+    document.getElementById("scroll-bottom").addEventListener("click", function(){
+        window.scrollTo(0,document.body.scrollHeight);
+    });
+</script>
+
+</body>
+</html>
