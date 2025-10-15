@@ -1,8 +1,29 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'IBM Plex Mono', monospace;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  color: #221f73;
+}
+
+p, li, a, button, input {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  color: #221f73;
+  line-height: 1.6;
+}
+
+/*---------------------------------------------------
+   HEADER 
+---------------------------------------------------*/
 .header{
     min-height: 100vh;
     width: 100%;
@@ -47,6 +68,10 @@ nav img{
 .nav-links ul li:hover::after{
     width: 100%;
 }
+
+/*---------------------------------------------------
+   INDEX-ABOUT SECTION
+---------------------------------------------------*/
 .text-box {
     width: 50%; /* Set the width to prevent it from stretching too far */
     color: #fff;
@@ -86,6 +111,9 @@ nav img{
     transition: 0.5s;
 }
 
+/*---------------------------------------------------
+   BACKGROUND
+---------------------------------------------------*/
 .img1 {
     position: absolute;
     top: 30%; /* Align with the text-box vertically */
@@ -174,47 +202,67 @@ nav .fa{
 
 }
 
-/*----- about -----*/
-.about{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
+/*---------------------------------------------------
+   SKILL SECTION
+---------------------------------------------------*/
+.skill {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
 }
-h1{
-    font-size: 36px;
-    font-weight: 600;
+
+/* Titles and paragraph text */
+.skill h1 {
+  font-size: 36px;
+  font-weight: 600;
 }
-p{
-    color: #777;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
+
+.skill p {
+  color: #777;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
 }
-.row{
-    margin-top: 5%;
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
+
+/* Row container (only inside .skill) */
+.skill .row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
 }
-.info{
-    flex-basis: 31%;
-    background: #f7f4ff;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
+
+/* Each skill card */
+.skill .info {
+  flex-basis: 31%;
+  background: #f7f4ff;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
 }
-h3{
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
+
+.skill h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
 }
-.info:hover{
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+
+/* Hover effect */
+.skill .info:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
+
+/* Responsive layout */
+@media (max-width: 700px) {
+  .skill .row {
+    flex-direction: column;
+  }
+}
+
 
 @media(max-width: 700px){
     .row{
@@ -222,7 +270,9 @@ h3{
     }
 }
 
-/*------project------*/
+/*---------------------------------------------------
+   PROJECT LIST PAGE
+---------------------------------------------------*/
 .project {
     width: 80%;
     margin: auto;
@@ -259,7 +309,7 @@ h3{
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Add a subtle separator */
 }
 
-.layer {
+.project-col .layer {
     background: rgba(71, 91, 62, 0.5);
     height: 100%;
     width: 100%;
@@ -273,11 +323,11 @@ h3{
     padding: 10px; /* Add padding for better spacing */
 }
 
-.layer:hover {
+.project-col .layer:hover {
     background: rgba(71, 91, 62, 0.9);
 }
 
-.layer h3 {
+.project-col .layer h3 {
     font-weight: 600;
     color: #fff;
     font-size: 36px; /* Increased font size for better readability */
@@ -290,7 +340,7 @@ h3{
     justify-content: center;
 }
 
-.layer p {
+.project-col .layer p {
     color: #fff;
     font-size: 16px; /* Larger font size for better readability */
     text-align: center;
@@ -305,49 +355,9 @@ h3{
 }
 
 
-
-.more-btn{
-    display: inline-block;
-    text-decoration: none;
-    padding: 12px 34px;
-    font-size: 15px;
-    border: 1px solid rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-.more-btn:hover{
-    border: 1px solid #d2beff;
-    color: #fff;
-    background: #d2beff;
-    transition: 0.5s;
-}
-
-
-/*------extracurricular-----*/
-.extra{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-.extra-col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-}
-.extra-col img{
-    max-width:100%;
-    max-height:100%;
-    object-fit: contain;
-    width: 100%;
-    display: block;
-}
-
-/* ---- Experience----- */
+/*---------------------------------------------------
+   EXPERIENCE SECTION
+---------------------------------------------------*/
 .experience {
     background-color: #f9f9f9;
     padding: 50px 20px;
@@ -421,26 +431,10 @@ h3{
     color: #333333;
 }
 
-.achievements {
-    margin-top: 10px;
-    list-style: none;
-    padding: 0;
-}
 
-.achievements li {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 15px;
-    color: #555555;
-    margin-bottom: 5px;
-}
-
-.achievements li strong {
-    color: #333333;
-}
-
-
-
-/*---contact---*/
+/*---------------------------------------------------
+   CONTACT SECTION
+---------------------------------------------------*/
 .contact{
     width: 80%;
     margin: auto;
@@ -472,8 +466,9 @@ h3{
 }
 
 
-/*---project page----*/
-
+/*---------------------------------------------------
+   PROJECT PAGE
+---------------------------------------------------*/
 .project-list{
     grid-column-start:2;
     grid-column-end:3;
@@ -515,32 +510,52 @@ h3{
 }
 
 /*---project info page----*/
-.project-info{
-    color:rgb(107, 96, 113);
-    width: 90%;
-    padding-top: 30px;
-    padding-left: 70px;
-}
-.project-info h1, .blog-info h1 {
-    text-align: left;
-    font-size: 52px;
-    margin-bottom: 20px;
+/* ---------------------------------------------------
+   PROJECT INFO SECTION (single project page)
+--------------------------------------------------- */
+.project-info {
+  color: rgb(60, 60, 65);
+  max-width: 900px;
+  margin: 80px auto;
+  line-height: 1.7;
+  padding: 0 30px;
+  text-align: left; /* ensures uniform left alignment */
 }
 
-.project-info h3, .blog-info h3 {
-    text-align: left;
-    font-size: 30px;
-    font-weight: 600;
-    margin-bottom: 15px;
+/* Headings */
+.project-info h1 {
+  font-size: 42px;
+  font-weight: 600;
+  color: #2e2e2e;
+  margin-bottom: 12px;
+}
+
+.project-info h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 20px;
 }
 
 /* Paragraphs */
-.project-info p, .blog-info p {
-    text-align: left;
-    font-size: 15px;
-    line-height: 1.6;
-    margin: 10px 0 40px;
+.project-info p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+  text-align: justify; /* makes paragraph edges look clean */
+  text-justify: inter-word;
 }
+
+/* Images */
+.project-info img {
+  display: block;
+  margin: 30px auto;
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 
 .git-btn{
     display: incline-block;
