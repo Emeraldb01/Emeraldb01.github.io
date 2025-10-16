@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Guest Lecture Reflections ,  Mark Moran (Bayer Crop Sciences)</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<section class="sub-header">
+    <nav>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../projects.html">PORTFOLIO</a></li>
+                <li><a href="../blog.html">BLOG</a></li>
+                <li><a id="scroll-bottom">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+
+<!-- Blog Post Section -->
+<section class="project-info">
+    <h1>Guest Lecture Reflections: Mark Moran, Bayer Crop Sciences</h1>
+    <h3>By Nai-Syuan Chang | September 2025</h3>
+    <br>
+
+    <p>
+        This reflection is part of <strong>CS 598 Digital Agriculture</strong>, a course taught by <strong>Dr. John F. Reid</strong>, formerly from John Deere.  
+        In this class, we study the current landscape of agricultural technology ,  from autonomous machinery to digital sensing, biotech, and sustainability.  
+        This week’s guest speaker, <strong>Dr. Mark Moran</strong> from <strong>Bayer Crop Sciences</strong>, previously worked at John Deere as well, giving him a rare dual perspective across two key sides of the farming industry.  
+        Deere focuses on <strong>OEM equipment</strong> such as tractors and autonomous systems, while Bayer ,  formerly Monsanto ,  focuses on <strong>inputs</strong> like seeds, fertilizers, and crop protection.  
+        Dr. Moran’s experience across both companies offered a nuanced view of how technology, biology, and data science intersect to shape the future of agriculture.
+    </p>
+
+    <p>
+        In his lecture, Dr. Moran introduced a new perspective on digital agriculture ,  biotechnology.  
+        Biotech tackles farming challenges from a biological and chemical standpoint: modifying seeds to increase yield, creating fertilizers that enhance growth, and developing weed killers that are safer for the environment.  
+        But what stood out to me was how much <strong>computer science</strong> underpins these breakthroughs.
+    </p>
+
+    <p>
+        For example, in the protein folding problem, scientists once spent weeks or months predicting how a protein would take shape.  
+        With the help of computational models inspired by natural language processing, computers can now predict most known protein structures efficiently.  
+        This advancement has accelerated genetic modification and chemical discovery in agriculture ,  lowering input costs and increasing output, reshaping how innovation happens in farming.
+    </p>
+
+    <p>
+        Earlier in the course, we discussed how agriculture is high risk, where a single failed harvest can devastate a farmer’s livelihood.  
+        In contrast, Dr. Moran described agricultural machinery as low risk: the worst a self-driving tractor might do is stop in the middle of a field.  
+        Unlike urban vehicles, farm machinery can safely halt and wait for human input.  
+        This difference changes how autonomy is developed, tested, and trusted in agricultural contexts.
+    </p>
+
+    <p>
+        Dr. Moran also shared a “pyramid of work”: at the base is manual labor, above it repetitive work, then pattern recognition, and at the top, creative thinking.  
+        Each technological wave ,  the steam engine, the computer, AI ,  automates a layer of that pyramid.  
+        Yet humans remain essential for generating new ideas and breakthroughs.  
+        This idea resonated with me deeply: technology doesn’t replace us; it amplifies what we can achieve.
+    </p>
+
+    <p>
+        One internal conflict I felt during the talk was about competing goals in AgTech.  
+        Biotech innovations aim to make seeds stronger and easier to grow, while machinery advancements often aim to use fewer inputs and lower costs.  
+        Aren’t these goals in tension?  
+        Dr. Moran acknowledged that they are ,  but both take over a decade to reach production, and progress depends on what innovations emerge next.  
+        This made me think about sustainable business models that can balance both sides without exploiting consumers.
+    </p>
+
+    <p>
+        The story that struck me most was when Dr. Moran described introducing a self-driving tractor to a farmer.  
+        The developer saw it as a tool to boost productivity and profit.  
+        The farmer thought for a moment and said, “With this technology, I can finally go to the football game with my son.”  
+        That moment reframed everything ,  technology isn’t just about efficiency or revenue; it’s about giving people back time and improving their quality of life.
+    </p>
+
+    <p>
+        In summary, Dr. Moran expanded my view of agricultural technology to include biotechnology ,  a field deeply tied to chemistry, biology, and AI.  
+        From the history of Bayer to the protein folding problem, his talk illustrated how interdisciplinary innovation drives both competition and collaboration in modern farming.  
+        It reminded me that at its best, technology doesn’t just make farming smarter ,  it makes life better.
+    </p>
+</section>
+
+<!-- Contact Section -->
+<section class="contact">
+    <h1>Contact Me</h1>
+    <div class="align">
+        <a href="https://github.com/Emeraldb01?tab=repositories" target="_blank" aria-label="GitHub">
+            <i class="fa fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/naisyuanchang" target="_blank" aria-label="LinkedIn">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://app.joinhandshake.com/profiles/gvxpfw" target="_blank" aria-label="Handshake">
+            <i class="fa fa-handshake-o"></i>
+        </a>
+    </div>
+    <div class="align">
+        <p>naisyuanchang@gmail.com<br>858-933-8169</p>
+    </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){ navLinks.style.right = "0"; }
+    function hideMenu(){ navLinks.style.right = "-200px"; }
+    document.getElementById("scroll-bottom").addEventListener("click", function(){
+        window.scrollTo(0,document.body.scrollHeight);
+    });
+</script>
+
+</body>
+</html>

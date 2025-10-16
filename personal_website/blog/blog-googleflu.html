@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>The Parable of Google Flu: Traps in Big Data Analysis</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<section class="sub-header">
+    <nav>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../projects.html">PORTFOLIO</a></li>
+                <li><a href="../blog.html">BLOG</a></li>
+                <li><a id="scroll-bottom">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+
+<!-- Blog Post Section -->
+<section class="project-info">
+    <h1>My Thoughts on "The Parable of Google Flu: Traps in Big Data Analysis"</h1>
+    <h3>By Nai-Syuan Chang | October 2025</h3>
+    <br>
+
+    <p>
+        Before reading <em>The Parable of Google Flu</em>, I saw Big Data as both useful and concerning.  
+        I understood its potential for bias and worried about the ethics of data collection, but I hadn’t thought much about who gets access to those datasets.  
+        From my own experience training models, I also questioned whether data actually capture what matters and whether predictions truly reflect the world.  
+        Small flaws in data collection or model tuning can lead to large distortions in results, so researchers need to be careful, ethical, and aware of their biases to produce meaningful work.
+    </p>
+
+    <p>
+        The reading reinforced much of this perspective.  
+        It emphasized that bigger data is not always better data.  
+        One example described how a model using all available search data performed worse than one trained on a smaller, curated subset.  
+        That resonated with my own experience, if data aren’t cleaned or filtered, noise overwhelms the signal.  
+        The author also noted that behavioral data, like time spent with coworkers, may not represent the depth of those relationships.  
+        This reminded me that data can be accurate yet still fail to tell the whole story of a person.
+    </p>
+
+    <p>
+        The commercialization of Big Data also stood out.  
+        Markets use it for advertising, insurance, and finance, echoing real-world examples like Flock cameras that track movement and share information across police networks, advertisers, and private firms.  
+        It brought to mind how companies such as Walmart collect faces, purchases, and behavioral data from anyone who enters their stores.
+    </p>
+
+    <p>
+        Another insight was how algorithms actively shape the data they generate.  
+        The reading described Google’s search engine evolving in ways that alter the dataset itself.  
+        I immediately thought of social media platforms, where algorithms amplify extreme content because it drives engagement.  
+        This cycle fuels echo chambers and polarization, and media outlets often exploit it, highlighting one extreme post from an opposing group and framing it as typical, which only intensifies division.
+    </p>
+
+    <p>
+        The final idea that stayed with me was about access.  
+        Large corporations and elite universities have the resources to obtain massive datasets and computing power, while smaller institutions are left out.  
+        This gap feels even more significant in the era of generative AI, where data and GPUs are limited and expensive.  
+        As information spreads faster and wider than ever, these inequalities risk amplifying existing biases and the most harmful aspects of online discourse.
+    </p>
+
+    <p>
+        <em>The Parable of Google Flu</em> ultimately reminded me that data alone isn’t knowledge.  
+        Scale and speed can’t replace context, and algorithms can reinforce the very distortions they aim to measure.  
+        Responsible data science means asking not just what we can predict, but what we should.
+    </p>
+</section>
+
+<!-- Contact Section -->
+<section class="contact">
+    <h1>Contact Me</h1>
+    <div class="align">
+        <a href="https://github.com/Emeraldb01?tab=repositories" target="_blank" aria-label="GitHub">
+            <i class="fa fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/naisyuanchang" target="_blank" aria-label="LinkedIn">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://app.joinhandshake.com/profiles/gvxpfw" target="_blank" aria-label="Handshake">
+            <i class="fa fa-handshake-o"></i>
+        </a>
+    </div>
+    <div class="align">
+        <p>naisyuanchang@gmail.com<br>858-933-8169</p>
+    </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){ navLinks.style.right = "0"; }
+    function hideMenu(){ navLinks.style.right = "-200px"; }
+    document.getElementById("scroll-bottom").addEventListener("click", function(){
+        window.scrollTo(0,document.body.scrollHeight);
+    });
+</script>
+
+</body>
+</html>

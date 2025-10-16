@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Timeline Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<section class="sub-header">
+    <nav>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="projects.html">PORTFOLIO</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a id="scroll-bottom">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+
+<!-- Project Information Section -->
+<section>
+  <div class="project-info" id="hello_fire">
+    <h1>HELlo_fire: Sustainable Firebreak Simulation</h1>
+    <h3>Modeling Wildfire Spread and Tractor Path Planning for Safer, Smarter Farming</h3>
+    <strong><br>Year: 2025 | Team Project | Role: Product Manager & Full Stack Developer</strong>
+
+    <p><br>
+      <strong>HELlo_fire</strong> is an interactive research simulation that models wildfire behavior on farmland and computes optimal tractor firebreak paths to protect crops and reduce environmental damage. 
+      The project explores how <strong>digital agriculture and autonomous systems</strong> can contribute to <strong>farm safety, sustainability, and data-driven decision making</strong>.
+    </p>
+
+    <p>
+      As <strong>Product Manager and Full Stack Developer</strong>, I led both strategic planning and technical implementation. 
+      I coordinated our milestone roadmap, authored the <strong>project charter</strong> and <strong>success criteria</strong>, and managed documentation to align research goals with real-world applications.  
+      On the development side, I built the simulation engine that integrates <strong>terrain, slope, wind, and moisture data</strong> with fire propagation models, enabling tractors to adaptively compute safer paths in dynamic fire conditions.
+    </p>
+
+    <p>
+      Our long-term goal is to connect this research to <strong>real tractor sensor data and control systems</strong>, 
+      helping farmers make informed decisions that minimize loss while improving worker safety.  
+      The project reflects my commitment to designing technology that bridges simulation with practice — supporting a more resilient and sustainable agricultural future.
+    </p>
+
+    <p><br><strong>Key Deliverables:</strong></p>
+    <ul>
+      - Designed and documented system architecture and sustainability-focused success metrics</br>
+      - Implemented wildfire spread and terrain-aware pathfinding using the Rothermel model and D* algorithm</br>
+      - Coordinated research milestones and integrated safety-driven objectives into the simulation</br>
+      - Developed visualization for real-time fire spread and tractor avoidance behavior</br>
+    </ul>
+
+    <p><br><strong>Current Progress:</strong> 
+      At the midterm checkpoint, the simulation demonstrates adaptive path planning and awareness-based fire avoidance.
+      The next phase aims to integrate tractor-level sensor feedback and evaluate real-world applicability in digital agriculture research.
+    </p>
+
+    <!-- Embedded PDFs -->
+    <h2>Project Charter & Midterm Checkpoint</h2>
+    <div class="pdf-container">
+      <iframe src="hello_fire/Project_Charter.pdf" width="100%" height="500px" title="Project Charter"></iframe>
+      <iframe src="hello_fire/Midterm_Report.pdf" width="100%" height="500px" title="Midterm Checkpoint"></iframe>
+    </div>
+  </div>
+</section>
+
+
+
+<!----Contact---->
+<section class="contact">
+    <h1>Contact Me</h1>
+    <div class="align">
+        <a href="https://github.com/Emeraldb01?tab=repositories" target="_blank" aria-label="GitHub">
+            <i class="fa fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/naisyuanchang" target="_blank" aria-label="LinkedIn">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://app.joinhandshake.com/profiles/gvxpfw" target="_blank" aria-label="Handshake">
+            <i class="fa fa-handshake-o"></i>
+        </a>
+    </div>
+    <div class="align">
+        <p>naisyuanchang@gmail.com<br>858-933-8169</p>
+    </div>
+</section>
+
+<!-- JavaScript for menu toggle -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+    document.getElementById("scroll-bottom").addEventListener("click", function(){
+        window.scrollTo(0,document.body.scrollHeight);
+    });
+</script>
+
+</body>
+</html>

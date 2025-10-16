@@ -9,6 +9,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .project-grid {
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding-top: 50px;
+        }
+        .project-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project-card-content {
+            padding: 20px;
+            text-align: left;
+        }
+        .project-card-content h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+        .project-card-content p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        .sub-header nav ul li a {
+            color: #fbf9f9;
+        }
+    </style>
 </head>
 <body>
 
@@ -19,7 +64,7 @@
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="projects.html">PORTFOLIO</a></li>
                 <li><a href="blog.html">BLOG</a></li>
                 <li><a id="scroll-bottom">CONTACT</a></li>
             </ul>
@@ -30,12 +75,35 @@
 
 
 <!-- Blog Section -->
-<section>
-    <div class="project-info">
-        <h1>Blog</h1>
-        <h3>Coming Soon</h3>
-        <p>Stay tuned for updates and insights on my latest projects, technologies, and experiences.</p>
+<section class="project-grid">
+    <div class="project-card">
+        <a href="blog/blog-googleflu.html"><img src="image/DG4.png" alt="The Parable of Google Flu Reflection"></a>
+        <div class="project-card-content">
+            <h3>My Thoughts on "The Parable of Google Flu: Traps in Big Data Analysis"</h3>
+            <p>
+                A reflection on bias, access, and feedback loops in Big Data,  exploring how scale without context can distort insight rather than deepen it.
+            </p>
+        </div>
     </div>
+    <div class="project-card">
+        <a href="blog/blog-moran.html"><img src="image/DG1.png" alt="Guest Lecture Reflections"></a>
+        <div class="project-card-content">
+            <h3>Reflections on Mark Moran (Bayer Crop Sciences) Guest Lecture</h3>
+            <p>
+                Reflections on Dr. Moran’s lecture about biotech, automation, and how agricultural innovation connects profit, safety, and human impact.
+            </p>
+        </div>
+    </div>
+    <div class="project-card">
+        <a href="blog/blog-human-ai-guidelines.html"><img src="image/DG3.png" alt="Reflections on Human-AI Design Guidelines"></a>
+        <div class="project-card-content">
+            <h3>My Thoughts on Human-AI Design Guidelines</h3>
+            <p>
+                Thoughts on two readings exploring how practitioners use AI design guidelines, the challenges of applying them in practice, and why AI literacy should begin early.
+            </p>
+        </div>
+    </div>
+
 </section>
 
 <!-- Contact Section -->

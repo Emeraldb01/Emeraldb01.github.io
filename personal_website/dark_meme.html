@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Dark Meme Sentiment Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<section class="sub-header">
+    <nav>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="projects.html">PORTFOLIO</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a id="scroll-bottom">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+
+<!-- Project Information Section -->
+<section>
+    <div class="project-info" id="darkmemes">
+        <h1>Tracing the Emotional Impact of Dark Humor</h1>
+        <h3>A Longitudinal Analysis of Reddit Users Sentiment Before and After
+            Commenting on Dark Memes</h3>
+        <strong><br>Year: 2025 | Team Project | Role: Product Manager & Data Engineer</strong>
+
+        <p><br>
+            This ongoing research explores how exposure to <strong>dark humor memes</strong> relates to changes in user sentiment, engagement, and online well-being.  
+            By analyzing large-scale Reddit discussions, our goal is to understand whether engaging with darker meme content correlates with emotional adaptation, stress relief, or increased negativity over time.
+        </p>
+
+        <p>
+            As <strong>Product Manager and Data Engineer</strong>, I designed the project’s technical pipeline and led research coordination.  
+            I built automated scripts to <strong>scrape, clean, and categorize Reddit data</strong> using PRAW and Pandas, and integrated sentiment and emotion scoring models including VADER and LIWC.  
+            I also managed research milestones, authored the <strong>project charter</strong> and <strong>midterm progress report</strong>, and established reproducible workflows for team analysis.
+        </p>
+
+        <p>
+            Our research bridges <strong>computational social science and mental health</strong> — investigating how humor, exposure to dark content, and emotional expression interact in online spaces.  
+            The long-term goal is to inform healthier content moderation and help platforms distinguish between dark humor as a coping mechanism versus harmful negativity.
+        </p>
+
+        <p><br><strong>Key Deliverables:</strong></p>
+        <ul>
+            - Designed and implemented end-to-end Reddit data collection and classification pipeline</br>
+            - Defined success metrics and project documentation for academic reproducibility</br>
+            - Conducted sentiment, toxicity, and emotional category analysis using LIWC and VADER</br>
+            - Coordinated midterm milestone reporting and visualized early statistical findings</br>
+        </ul>
+
+        <p><br><strong>Current Progress:</strong> 
+            At the midterm stage, the dataset includes over 10,000 posts from dark and non-dark meme subreddits.  
+            Preliminary analysis suggests measurable differences in emotional tone and linguistic expression between groups, forming the foundation for final hypothesis testing.
+        </p>
+
+        <!-- Embedded PDFs -->
+        <h2>Midterm Report</h2>
+        <div class="pdf-container">
+            <iframe src="dark_memes/Midterm_Report.pdf" width="100%" height="500px" title="Midterm Report"></iframe>
+        </div>
+    </div>
+</section>
+
+<!----Contact---->
+<section class="contact">
+    <h1>Contact Me</h1>
+    <div class="align">
+        <a href="https://github.com/Emeraldb01?tab=repositories" target="_blank" aria-label="GitHub">
+            <i class="fa fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/naisyuanchang" target="_blank" aria-label="LinkedIn">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://app.joinhandshake.com/profiles/gvxpfw" target="_blank" aria-label="Handshake">
+            <i class="fa fa-handshake-o"></i>
+        </a>
+    </div>
+    <div class="align">
+        <p>naisyuanchang@gmail.com<br>858-933-8169</p>
+    </div>
+</section>
+
+<!-- JavaScript for menu toggle -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){ navLinks.style.right = "0"; }
+    function hideMenu(){ navLinks.style.right = "-200px"; }
+    document.getElementById("scroll-bottom").addEventListener("click", function(){
+        window.scrollTo(0,document.body.scrollHeight);
+    });
+</script>
+
+</body>
+</html>

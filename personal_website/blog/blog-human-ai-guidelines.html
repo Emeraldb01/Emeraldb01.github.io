@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Reflections on Human-AI Design Guidelines</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<section class="sub-header">
+    <nav>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../projects.html">PORTFOLIO</a></li>
+                <li><a href="../blog.html">BLOG</a></li>
+                <li><a id="scroll-bottom">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+
+<!-- Blog Post Section -->
+<section class="project-info">
+    <h1>Reflections on Human-AI Design Guidelines</h1>
+    <h3>By Nai-Syuan Chang | March 2025</h3>
+    <br>
+
+    <p>
+        These two readings, <em>Investigating How Practitioners Use Human-AI Guidelines: A Case Study on the People + AI Guidebook</em> and <em>Guidelines for Human-AI Interaction</em>, explored how practitioners engage with the design principles behind AI systems. Together, they offered both a practical and theoretical view of how design guidelines function across roles, teams, and stages of product development.
+    </p>
+
+    <p>
+        In the first reading, the research focused on evaluating the <strong>People + AI Guidebook</strong> through interviews with employees who work with AI in different roles and industries.  
+        What struck me first was that, although the guidebook provides a useful overview, it cannot serve as a step-by-step manual for real-world design teams.  
+        It works best as an entry-level resource to educate people from various backgrounds, but not as a detailed reference for specialized use.  
+        Another point I found interesting was how people in different positions use the same guide differently.  
+        A manager might treat it as teaching material, while a UX designer could use it as a starting point for brainstorming.  
+        The study also highlighted the need for more guidance in the early stages of product development, particularly around data collection, an area that often shapes the quality of AI services.
+    </p>
+
+    <p>
+        The second reading, <strong>Guidelines for Human-AI Interaction</strong>, extended this idea by offering a way to measure how useful AI UX guidelines actually are for designers and managers.  
+        I appreciated how the researchers categorized the guidelines into broad design principles and then evaluated their relevance and applicability.  
+        By analyzing the accuracy of 18 key recommendations, the research provided a clearer view of how different types of products relate to existing design principles and which areas still need more attention.  
+        This structure not only helps future guidebook development but also encourages researchers to focus on applications, such as voice assistants, that remain underrepresented in current design frameworks.
+    </p>
+
+    <p>
+        Reading the two papers together emphasized that <strong>people in different positions, companies, and product stages need distinct forms of guidance</strong>.  
+        Yet having too many overlapping or redundant guidelines can cause confusion, mismatches, or mistakes in real workflows.  
+        It made me think about how such ideas could be simplified and communicated in a way that most people can understand and apply across different contexts.
+    </p>
+
+    <p>
+        Through these readings, I also realized that the foundation of human-AI interaction should be introduced much earlier in education.  
+        People working in AI, management, business, or social science should all understand how humans interact with intelligent systems, not only in how we design them, but how we use and feel about them.  
+        In higher education, these ideas should be a mandatory part of the curriculum, and in K–12, students should begin developing basic literacy around AI technologies and their emotional and ethical dimensions.
+    </p>
+
+    <p>
+        What stood out across both studies was the effort to <strong>evaluate the quality of AI design guidelines themselves</strong>.  
+        Categorizing them by product function creates a useful roadmap for designing better, more targeted guidebooks for each type of AI product.  
+        These readings raised important questions about how to ensure that the growing number of human-AI design resources remain adaptable, relevant, and accessible to everyone who builds or uses intelligent systems.
+    </p>
+</section>
+
+<!-- Contact Section -->
+<section class="contact">
+    <h1>Contact Me</h1>
+    <div class="align">
+        <a href="https://github.com/Emeraldb01?tab=repositories" target="_blank" aria-label="GitHub">
+            <i class="fa fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/naisyuanchang" target="_blank" aria-label="LinkedIn">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://app.joinhandshake.com/profiles/gvxpfw" target="_blank" aria-label="Handshake">
+            <i class="fa fa-handshake-o"></i>
+        </a>
+    </div>
+    <div class="align">
+        <p>naisyuanchang@gmail.com<br>858-933-8169</p>
+    </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){ navLinks.style.right = "0"; }
+    function hideMenu(){ navLinks.style.right = "-200px"; }
+    document.getElementById("scroll-bottom").addEventListener("click", function(){
+        window.scrollTo(0,document.body.scrollHeight);
+    });
+</script>
+
+</body>
+</html>
